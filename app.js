@@ -18,8 +18,7 @@ const configuration = {
   speak: {
     language: 'pt-BR'
   },
-  verboseLogging: true,
-  voice: 'pt-BR_IsabelaVoice'
+  verboseLogging: true
 };
 
 const tj = new tjbot(hardware, configuration, credentials);
