@@ -35,8 +35,8 @@ tj.listen((msg) => {
 
   // check to see if they are talking to TJBot
   const name = msg.split(' ')[0].match(/(sara|vara|sarah|rara)/i)[0];
+  console.log('Name logger', name);
   if (name) {
-
     // send to the conversation service
     tj.converse(WORKSPACEID, msg, (response) => {
       // speak the result
