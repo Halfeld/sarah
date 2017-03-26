@@ -1,3 +1,4 @@
+const colors = require('colors/safe');
 const tjbot = require('./tjbotlib');
 const config = require('./config/configs');
 const EnumHelper = require('./config/enum-helper');
@@ -25,11 +26,13 @@ const configuration = {
 const tj = new tjbot(hardware, configuration, credentials);
 
 tj.listen((msg) => {
-  console.log('Message logger', msg);
+  console.log('');
+  console.log(colors.red('Message logger'), msg);
 
   // check to see if they are talking to TJBot
   const name = msg.split(' ')[0];
-  console.log('Name logger', name);
+  console.log(colors.red('Name logger'), name);
+  console.log('');
   if (EnumHelper.namePossibles.indexOf(name) !== -1) {
     // send to the conversation service
     tj.converse(WORKSPACEID, msg, (response) => {
