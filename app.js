@@ -30,7 +30,7 @@ tj.listen((msg) => {
   console.log(colors.green('Message logger'), msg);
 
   // check to see if they are talking to TJBot
-  const name = msg.split(' ')[0].trim();
+  const name = msg.split(' ')[0];
   console.log(colors.green('Name logger'), name);
   console.log('');
   if (EnumHelper.namePossibles.indexOf(name) !== -1) {
