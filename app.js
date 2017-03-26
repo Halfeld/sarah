@@ -31,7 +31,7 @@ const tj = new tjbot(hardware, configuration, credentials);
 //    tj.speak(response.description);
 //  });
 
-tj.speak('Mahhh oe, Roda o báu da felicidade')
+tj.speak('Olá, meu nome é Sarah, como eu posso te ajudar?')
   /*
   // check to see if they are talking to TJBot
   if (msg.startsWith(tj.configuration.robot.name)) {
