@@ -23,26 +23,23 @@ const configuration = {
 
 const tj = new tjbot(hardware, configuration, credentials);
 
-//tj.listen(function(msg) {
+tj.listen((msg) => {
 
-// send to the conversation service
-//tj.converse(WORKSPACEID, turn, function(response) {
-// speak the result
-//    tj.speak(response.description);
-//  });
+  // send to the conversation service
+  tj.converse(WORKSPACEID, turn, (response) => {
+    // speak the result
+    tj.speak(response.description);
+  });
 
-tj.speak('Olá, meu nome é Sarah, como eu posso te ajudar?')
-  /*
   // check to see if they are talking to TJBot
-  if (msg.startsWith(tj.configuration.robot.name)) {
+  if (msg.startsWith(/Sarah/i)) {
     // remove our name from the message
-    var turn = msg.toLowerCase().replace(tj.configuration.robot.name.toLowerCase(), "");
+    var turn = msg.toLowerCase().replace('Sarah'.toLowerCase(), "");
 
     // send to the conversation service
-    tj.converse(WORKSPACEID, turn, function(response) {
+    tj.converse(WORKSPACEID, turn, (response) => {
       // speak the result
       tj.speak(response.description);
     });
   }
-  */
-//})
+})
