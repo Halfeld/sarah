@@ -31,11 +31,14 @@ tj.listen((msg) => {
     tj.speak(response.description);
   });
 
+  console.log('Message logger', msg);
+
   // check to see if they are talking to TJBot
-  if (msg.startsWith(/Sarah/i)) {
+  if (msg.startsWith('Sarah')) {
     // remove our name from the message
     var turn = msg.toLowerCase().replace('Sarah'.toLowerCase(), "");
 
+    console.log('Turn logger', turn);
     // send to the conversation service
     tj.converse(WORKSPACEID, turn, (response) => {
       // speak the result
