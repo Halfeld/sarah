@@ -1,6 +1,6 @@
 const tjbot = require('./tjbotlib');
 const config = require('./config/configs');
-const { namePossibles } = require('./config/enum-helper');
+const EnumHelper = require('./config/enum-helper');
 
 const credentials = config.credentials;
 const WORKSPACEID = config.conversationWorkspaceId;
@@ -29,7 +29,7 @@ tj.listen((msg) => {
 
   // check to see if they are talking to TJBot
   const name = msg.split(' ').join();
-  if (namePossibles.indexOf(name) !== -1) {
+  if (EnumHelper.namePossibles.indexOf(name) !== -1) {
     // send to the conversation service
     tj.converse(WORKSPACEID, msg, (response) => {
       // speak the result
