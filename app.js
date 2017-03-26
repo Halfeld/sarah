@@ -24,7 +24,6 @@ const configuration = {
 
 const tj = new tjbot(hardware, configuration, credentials);
 
-tj.wave('up');
 tj.listen((msg) => {
   console.log('');
   console.log('> Message logger', msg);
