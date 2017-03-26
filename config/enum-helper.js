@@ -9,6 +9,7 @@ EnumHelper.namePossibles = [
   'lara',
   'mara',
   'zara',
+  'jara',
   'sara',
   'chara',
   'sala'

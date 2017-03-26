@@ -27,11 +27,11 @@ const tj = new tjbot(hardware, configuration, credentials);
 
 tj.listen((msg) => {
   console.log('');
-  console.log(colors.red('Message logger'), msg);
+  console.log(colors.green('Message logger'), msg);
 
   // check to see if they are talking to TJBot
-  const name = msg.split(' ')[0];
-  console.log(colors.red('Name logger'), name);
+  const name = msg.split(' ')[0].trim();
+  console.log(colors.green('Name logger'), name);
   console.log('');
   if (EnumHelper.namePossibles.indexOf(name) !== -1) {
     // send to the conversation service
