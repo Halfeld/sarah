@@ -1096,7 +1096,7 @@ TJBot.prototype.speak = function(message) {
     }
 
     // figure out which voice to use
-    var voice = "t-BR_IsabelaVoice"; // default voice
+    var voice = "pt-BR_IsabelaVoice"; // default voice
     for (var i in this._ttsVoices) {
         if (this._ttsVoices[i]["language"] == this.configuration.speak.language &&
             this._ttsVoices[i]["gender"] == this.configuration.robot.gender) {
