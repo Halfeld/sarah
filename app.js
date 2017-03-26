@@ -18,8 +18,8 @@ const configuration = {
   speak: {
     language: 'pt-BR'
   },
-  verboseLogging: true
-  // voice: 'pt-BR_IsabelaVoice'
+  verboseLogging: true,
+  voice: 'pt-BR_IsabelaVoice'
 };
 
 const tj = new tjbot(hardware, configuration, credentials);
@@ -32,7 +32,7 @@ const tj = new tjbot(hardware, configuration, credentials);
 //    tj.speak(response.description);
 //  });
 
-tj.speak('Mahhh oe, Roda o bâu da felicidade')
+tj.speak('Mahhh oe, Roda o báu da felicidade')
   /*
   // check to see if they are talking to TJBot
   if (msg.startsWith(tj.configuration.robot.name)) {
