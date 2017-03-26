@@ -34,9 +34,9 @@ tj.listen((msg) => {
   console.log('Message logger', msg);
 
   // check to see if they are talking to TJBot
-  if (msg.startsWith('Sarah')) {
+  if (msg.startsWith('Sara')) {
     // remove our name from the message
-    var turn = msg.toLowerCase().replace('Sarah'.toLowerCase(), "");
+    var turn = msg.toLowerCase().replace('Sara'.toLowerCase(), "");
 
     console.log('Turn logger', turn);
     // send to the conversation service
