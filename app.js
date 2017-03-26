@@ -24,13 +24,6 @@ const configuration = {
 const tj = new tjbot(hardware, configuration, credentials);
 
 tj.listen((msg) => {
-
-  // send to the conversation service
-  tj.converse(WORKSPACEID, turn, (response) => {
-    // speak the result
-    tj.speak(response.description);
-  });
-
   console.log('Message logger', msg);
 
   // check to see if they are talking to TJBot
