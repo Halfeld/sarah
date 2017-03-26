@@ -10,3 +10,5 @@ EnumHelper.namePossibles = [
   'zara',
   'sara',
 ];
+
+module.exports = EnumHelper;
