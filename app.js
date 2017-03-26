@@ -34,7 +34,9 @@ tj.listen((msg) => {
     // send to the conversation service
     tj.converse(WORKSPACEID, msg, (response) => {
       // speak the result
-      tj.speak(response.description);
+      if (response.description !== '') {
+        tj.speak(response.description);
+      }
     });
   }
 })
