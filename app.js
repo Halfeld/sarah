@@ -34,7 +34,7 @@ tj.listen((msg) => {
   console.log('Message logger', msg);
 
   // check to see if they are talking to TJBot
-  const name = msg.split(' ')[0].join();
+  const name = msg.split(' ')[0].match(/(sara|vara|sarah)/i)[0];
   if (name) {
     // remove our name from the message
     const turn = msg.replace(/(sara|vara|sarah)/i, '');
