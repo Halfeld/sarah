@@ -12,7 +12,12 @@ EnumHelper.namePossibles = [
   'jara',
   'sara',
   'chara',
-  'sala'
+  'sala',
+  'saraiva',
+  'escada',
+  'escala',
+  'chara',
+  'saiba'
 ];
 
 module.exports = EnumHelper;
