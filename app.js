@@ -28,7 +28,8 @@ tj.listen((msg) => {
   console.log('Message logger', msg);
 
   // check to see if they are talking to TJBot
-  const name = msg.split(' ').join();
+  const name = msg.split(' ')[0];
+  console.log('Name logger', name);
   if (EnumHelper.namePossibles.indexOf(name) !== -1) {
     // send to the conversation service
     tj.converse(WORKSPACEID, msg, (response) => {
