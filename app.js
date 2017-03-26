@@ -37,7 +37,7 @@ tj.listen((msg) => {
   const name = msg.split(' ')[0].join();
   if (name) {
     // remove our name from the message
-    const turn = msg.replace(/(sara,vara,sarah)*/i, '');
+    const turn = msg.replace(/(sara|vara|sarah)/i, '');
 
     console.log('Turn logger', turn);
     // send to the conversation service
